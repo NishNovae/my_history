@@ -1,0 +1,28 @@
+[project]
+name = "nish_my_history"
+<<<<<<< HEAD
+version = "0.1.0"
+=======
+version = "1.0.0"
+>>>>>>> fe3b1b0 (vers)
+description = "A package to search through parquet form history data"
+authors = [
+    {name = "NishNovae", email = "raecrowned@gmail.com"},
+]
+dependencies = []
+requires-python = "==3.11.*"
+readme = "README.md"
+license = {text = "MIT"}
+
+[project.scripts]
+<<<<<<< HEAD
+pq_search = "my_history.cli:cnt"
+
+[tool.pdm]
+distribution = false
+=======
+mh = "my_history.cli:argv"
+
+[tool.pdm]
+distribution = true
+>>>>>>> fe3b1b0 (vers)
