@@ -1,10 +1,5 @@
 # nish_history
-Warning: Purely working branch: do not attempt to merge into main!
-
-### Installation
-```
-$ pip install nish_history
-```
+Using CLI commands to search through .parquet form CLI history log
 
 ### Usage
 ```
@@ -24,6 +19,13 @@ git     3396
 ```
 $ git clone <URL>
 $ cd <PROJECT_NAME>
+$ pdm install
 $ [pdm test|pytest]
 $ pdm add -dG test pytest pytest-cov
+
+# option
+$ pdm add -dG test pytest pytest-cov
 ```
+
+### Reference
+- https://daobook.github.io/pdm/usage/dependency/
