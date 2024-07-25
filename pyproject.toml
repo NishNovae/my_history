@@ -10,6 +10,8 @@ requires-python = "==3.11.*"
 readme = "README.md"
 license = {text = "MIT"}
 
+[project.scripts]
+nish-history = "nish_history.cli:query"
 
 [tool.pdm]
-distribution = false
+distribution = true
