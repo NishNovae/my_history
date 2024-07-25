@@ -11,16 +11,26 @@ readme = "README.md"
 license = {text = "MIT"}
 
 [project.scripts]
-nh = "nish_history.cli:query"
+nish-history = "nish_history.cli:query"
 
 [tool.pdm]
-distribution = true
+distribution = false
+
 
 [tool.pdm.dev-dependencies]
 test = [
     "pytest>=8.3.1",
     "pytest-cov>=5.0.0",
 ]
+
+[tool.pdm.scripts]
+ctest = "pytest --cov"
+stest = "pytest -s"
+test = "pytest"
+venvoff = "deactivate"
+
+[tool.pytest.ini_options]
+pythonpath = [ "src/" ]
 
 [project.urls]
 Homepage="https://github.com/NishNovae/my_history/tree/0.1.0/simple"
