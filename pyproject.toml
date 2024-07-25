@@ -11,7 +11,7 @@ readme = "README.md"
 license = {text = "MIT"}
 
 [project.scripts]
-nish-history = "nish_history.cli:query"
+nish-history = "nish_history.cli:cmd"
 
 [tool.pdm]
 distribution = false
