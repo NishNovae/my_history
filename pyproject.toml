@@ -30,7 +30,7 @@ test = "pytest"
 venvoff = "deactivate"
 
 [tool.pytest.ini_options]
-pythonpath = [ "src/" ]
+pythonpath = [ "src/", "." ]
 
 [project.urls]
 Homepage="https://github.com/NishNovae/my_history/tree/0.1.0/simple"

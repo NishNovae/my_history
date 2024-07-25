@@ -2,16 +2,22 @@ import pandas as pd
 
 def read_data(path='~/db/parquet'):
     df = pd.read_parquet(path)
+    return df
 
-def top():
+def top(num=5, date='2024-07-12'):
     df = read_data()
-    fdf = df[df['dt'] == '2024-07-12']
+    fdf = df[df['dt'] == date]
     sdf = fdf.sort_values(by='cnt', ascending=False)
-    ddf = sdf.drop(columns=['dt'])
+    sdf = sdf.head(num)    
 
-    r = ddf.to_string(index=False)
+    ddf = sdf.drop(columns=['dt'])
+    tdf = ddf.head(num)
+
+    r = tdf.to_string(index=False)
     return r
 
 def count(query):
     df = read_data()
-    fdf = df[df['dt'].equals(query)]
+    fdf = df[ df['cmd'] == query ]
+    cnt = fdf['cnt'].sum()
+    return cnt
